@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GovernanceFlow — platform governance maintenance berbantuan AI untuk standarisasi input, validasi data, review approval, dan audit trail yang mudah dipahami.">
+<meta name="theme-color" content="#f6f8fc">
+<title>GovernanceFlow — Governance Maintenance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo">
+    <div class="logo-mark">G</div>
+    <div class="logo-text">
+      <strong>GovernanceFlow</strong>
+      <span>Governance Maintenance</span>
+    </div>
+  </div>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#problem">Masalah</a></li>
+    <li><a href="#solution">Solusi</a></li>
+    <li><a href="#menu-platform">Menu Platform</a></li>
+    <li><a href="#impact">Dampak</a></li>
+  </ul>
+
+  <a href="#menu-platform" class="nav-cta">Masuk Platform</a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Project Hackathon · Governance</div>
+      <h1>Data maintenance yang tadinya berantakan, sekarang jadi <span>terstruktur, tervalidasi, dan bisa diaudit</span>.</h1>
+      <p>
+        GovernanceFlow adalah aplikasi web untuk membantu tim operasional, supervisor,
+        dan manajer menjaga kualitas data maintenance. Lebih sedikit typo, lebih sedikit duplikasi,
+        dan keputusan maintenance jadi lebih cepat diambil.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu-platform" class="btn-primary">Masuk Platform</a>
+        <a href="#impact" class="btn-secondary">Lihat Dampak</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-value">94%</div>
+          <div class="stat-label">Data valid setelah dikirim</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">-68%</div>
+          <div class="stat-label">Koreksi manual berkurang</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">+37%</div>
+          <div class="stat-label">Kesiapan approval lebih cepat</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="panel-window soft-shadow">
+        <div class="window-top">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="window-body">
+          <div class="mini-kpi-row">
+            <div class="mini-kpi success">
+              <small>Data Tervalidasi</small>
+              <strong id="miniValidated">148</strong>
+            </div>
+            <div class="mini-kpi warning">
+              <small>Perlu Review</small>
+              <strong id="miniNeedReview">12</strong>
+            </div>
+          </div>
+          <div class="mini-form-card">
+            <div class="mini-form-title">Ringkasan Validasi Langsung</div>
+            <div class="fake-input">ID Aset: <b id="snapshotAsset">TRK-PLT-204</b></div>
+            <div class="fake-input">Lokasi: <b id="snapshotLocation">Warehouse Bekasi 2</b></div>
+            <div class="fake-input">Jenis Maintenance: <b id="snapshotType">Preventive</b></div>
+            <div class="fake-alert" id="snapshotAlert">✓ Aset terverifikasi · ✓ Format valid · ⚠ Ada issue serupa 6 hari lalu</div>
+          </div>
+          <div class="mini-list">
+            <div class="mini-list-item">
+              <span class="dot green"></span>
+              <p>Data bersih langsung masuk dashboard</p>
+            </div>
+            <div class="mini-list-item">
+              <span class="dot orange"></span>
+              <p>Data mencurigakan masuk review supervisor</p>
+            </div>
+            <div class="mini-list-item">
+              <span class="dot blue"></span>
+              <p>Semua perubahan tercatat di audit trail</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Rumusan Masalah</div>
+      <h2>Sering kali yang gagal duluan bukan mesin, tapi catatan maintenancenya.</h2>
+      <p>Banyak organisasi masih mengandalkan pencatatan manual, penamaan yang tidak konsisten, dan alur approval yang terpecah. Hasilnya: integritas data rendah, pengambilan keputusan lambat, dan risiko operasional meningkat.</p>
+    </div>
+
+    <div class="issue-grid">
+      <article class="issue-card soft-shadow">
+        <div class="issue-icon red">!</div>
+        <h3>Input Tidak Seragam</h3>
+        <p>Nama aset, label lokasi, dan status sering ditulis dengan format yang berbeda-beda.</p>
+      </article>
+      <article class="issue-card soft-shadow">
+        <div class="issue-icon orange">≠</div>
+        <h3>Validasi Lemah</h3>
+        <p>Tim mengirim data tanpa mekanisme konsisten untuk mendeteksi duplikasi atau format yang salah.</p>
+      </article>
+      <article class="issue-card soft-shadow">
+        <div class="issue-icon blue">⏱</div>
+        <h3>Approval Lambat</h3>
+        <p>Supervisor habis waktu mengecek data meragukan secara manual, bukan fokus ke issue yang penting.</p>
+      </article>
+      <article class="issue-card soft-shadow">
+        <div class="issue-icon green">✓</div>
+        <h3>Akuntabilitas Lemah</h3>
+        <p>Tidak ada jejak yang jelas tentang siapa mengubah apa, kapan, dan untuk alasan apa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="solution">
+  <div class="container split-layout">
+    <div>
+      <div class="section-head left">
+        <div class="eyebrow">Gambaran Solusi</div>
+        <h2>Satu antarmuka untuk standarisasi input, tandai risiko, dan dukung governance.</h2>
+        <p>GovernanceFlow menggabungkan form terstruktur, validasi data, routing approval, dan visibilitas audit dalam dashboard yang jelas — terutama untuk user non-teknis dan pengguna senior.</p>
+      </div>
+
+      <div class="feature-list">
+        <div class="feature-row">
+          <div class="feature-badge">1</div>
+          <div>
+            <h3>Form Standar yang Jelas</h3>
+            <p>Layout bersih, teks lebih besar, grouping field rapi, dan struktur wajib yang mengurangi kebingungan serta mencegah data kosong.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-badge">2</div>
+          <div>
+            <h3>Validasi Data Otomatis</h3>
+            <p>Sistem memeriksa kesalahan format, nilai yang tidak biasa, pola duplikasi, dan potensi inkonsistensi sebelum data lanjut dipakai.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-badge">3</div>
+          <div>
+            <h3>Approval dan Audit Governance</h3>
+            <p>Supervisor hanya review data yang penting, sementara setiap aksi tetap bisa dilacak untuk akuntabilitas dan pelaporan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-card soft-shadow">
+      <h3>Kenapa ini produk Governance</h3>
+      <ul class="check-list">
+        <li>Menstandarkan proses pelaporan maintenance</li>
+        <li>Meningkatkan integritas dan konsistensi data</li>
+        <li>Menciptakan akuntabilitas review yang jelas</li>
+        <li>Mendukung keputusan berbasis risiko</li>
+        <li>Menyediakan histori audit yang bisa ditelusuri</li>
+      </ul>
+      <div class="summary-note">
+        Cocok untuk tim logistik, operasional internal, warehouse management, fleet maintenance, dan skenario enterprise asset governance.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="menu-platform">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Menu Platform</div>
+      <h2>Pilih halaman kerja sesuai kebutuhan pengguna.</h2>
+      <p>Supaya alurnya lebih realistis, platform ini sekarang punya pemisahan halaman. User bisa masuk ke halaman input form untuk membuat data baru, atau langsung ke dashboard untuk monitoring dan review.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-card soft-shadow">
+        <div class="menu-icon">📝</div>
+        <h3>Halaman Input Maintenance</h3>
+        <p>Gunakan halaman ini saat admin atau teknisi ingin mengisi form maintenance baru dengan alur yang lebih fokus.</p>
+        <a href="form.html" class="btn-primary">Buka Halaman Form</a>
+      </article>
+      <article class="menu-card soft-shadow">
+        <div class="menu-icon">📊</div>
+        <h3>Dashboard Monitoring</h3>
+        <p>Gunakan dashboard untuk melihat KPI, review queue, data tersimpan, dan audit trail setelah data mulai masuk.</p>
+        <a href="dashboard.html" class="btn-secondary">Buka Dashboard</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="impact">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Dampak Bisnis</div>
+      <h2>Ini bukan cuma dashboard. Ini mengubah cara keputusan maintenance diambil.</h2>
+      <p>Saat kualitas input membaik, planning maintenance juga jadi lebih andal. Artinya lebih sedikit asumsi salah, lebih sedikit review yang terbuang, dan respons ke risiko aset jadi lebih cepat.</p>
+    </div>
+
+    <div class="impact-grid">
+      <article class="impact-card soft-shadow">
+        <h3>Efisiensi Operasional</h3>
+        <p>Mengurangi bolak-balik manual antara admin, supervisor, dan manajer dengan menstandarkan titik input pertama.</p>
+      </article>
+      <article class="impact-card soft-shadow">
+        <h3>Integritas Data</h3>
+        <p>Meningkatkan konsistensi penamaan, referensi aset, kategori issue, dan kesiapan data untuk approval.</p>
+      </article>
+      <article class="impact-card soft-shadow">
+        <h3>Visibilitas Governance</h3>
+        <p>Melacak aksi review, revisi, dan approval dengan ownership yang jelas dan histori bertimestamp.</p>
+      </article>
+      <article class="impact-card soft-shadow">
+        <h3>Pengurangan Risiko</h3>
+        <p>Menangkap record mencurigakan lebih awal agar organisasi bisa memprioritaskan aset yang tepat sebelum downtime membesar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
