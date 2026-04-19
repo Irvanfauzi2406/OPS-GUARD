@@ -441,13 +441,6 @@ function initAiAnalysis() {
       return;
     }
 
-    // Check if API key is configured
-    if (GROQ_API_KEY === "YOUR_GROQ_API_KEY_HERE") {
-      // Fallback mode — rule-based analysis
-      runRuleBasedAnalysis(assetId, location, type, date, note, workflow);
-      return;
-    }
-
     // Show loading
     const panel = document.getElementById("aiAnalysisPanel");
     const btnText = document.getElementById("analyzeAiText");
