@@ -10,7 +10,7 @@
 // Dapatkan GRATIS di: https://console.groq.com
 // (Sign up → API Keys → Create key, no credit card)
 // ──────────────────────────────────────────────
-const GROQ_API_KEY = "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";
+const GROQ_API_KEY = " ";
 const GROQ_MODEL   = "llama3-8b-8192";   // gratis, cepat, stabil
 const GROQ_URL     = "https://api.groq.com/openai/v1/chat/completions";
 
