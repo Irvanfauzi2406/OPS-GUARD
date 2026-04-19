@@ -6,12 +6,13 @@
    ========================================================== */
 
 // ──────────────────────────────────────────────
-// GEMINI CONFIG — Ganti dengan API key milikmu
-// Dapatkan GRATIS di: https://ai.google.dev
+// GROQ CONFIG — Ganti dengan API key milikmu
+// Dapatkan GRATIS di: https://console.groq.com
+// (Sign up → API Keys → Create key, no credit card)
 // ──────────────────────────────────────────────
-const GEMINI_API_KEY = "AIzaSyCBwBkFIX1fPOLQ8aFMY0YjZrzZU7C_vV4"
-const GEMINI_MODEL   = "gemini-1.5-flash";
-const GEMINI_URL     = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+const GROQ_API_KEY = "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";
+const GROQ_MODEL   = "llama3-8b-8192";   // gratis, cepat, stabil
+const GROQ_URL     = "https://api.groq.com/openai/v1/chat/completions";
 
 // ──────────────────────────────────────────────
 // STORAGE HELPERS
@@ -442,7 +443,7 @@ function initAiAnalysis() {
     }
 
     // Check if API key is configured
-    if (GEMINI_API_KEY === "YOUR_GEMINI_API_KEY_HERE") {
+    if (GROQ_API_KEY === "YOUR_GROQ_API_KEY_HERE") {
       // Fallback mode — rule-based analysis
       runRuleBasedAnalysis(assetId, location, type, date, note, workflow);
       return;
@@ -471,35 +472,44 @@ Data Input:
 
 Berikan output JSON dengan struktur berikut (hanya JSON, tanpa teks lain):
 {
-  "riskLevel": "low" | "medium" | "high",
-  "riskScore": angka 0-100,
+  "riskLevel": "low",
+  "riskScore": 20,
   "summary": "ringkasan singkat 1-2 kalimat dalam Bahasa Indonesia",
   "riskReasons": ["alasan 1", "alasan 2"],
   "recommendations": ["rekomendasi 1", "rekomendasi 2"],
-  "anomalies": ["anomali 1"] // kosong jika tidak ada,
-  "suggestedStatus": "Valid" | "Menunggu Review" | "Warning"
-}`;
+  "anomalies": [],
+  "suggestedStatus": "Valid"
+}
+
+Nilai riskLevel harus salah satu dari: low, medium, high
+Nilai suggestedStatus harus salah satu dari: Valid, Menunggu Review, Warning
+Hanya balas dengan JSON saja, tanpa penjelasan tambahan.`;
 
     try {
-      const resp = await fetch(GEMINI_URL, {
+      const resp = await fetch(GROQ_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${GROQ_API_KEY}`
+        },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.3, maxOutputTokens: 500 }
+          model: GROQ_MODEL,
+          messages: [{ role: "user", content: prompt }],
+          temperature: 0.3,
+          max_tokens: 500
         })
       });
 
       if (!resp.ok) throw new Error(`API Error: ${resp.status}`);
 
-      const data = await resp.json();
-      const raw  = data?.candidates?.[0]?.content?.parts?.[0]?.text || "{}";
+      const data  = await resp.json();
+      const raw   = data?.choices?.[0]?.message?.content || "{}";
       const clean = raw.replace(/```json|```/g, "").trim();
       const result = JSON.parse(clean);
       renderAiResult(result, assetId);
 
     } catch (err) {
-      console.warn("Gemini error, fallback to rule-based:", err);
+      console.warn("Groq error, fallback to rule-based:", err);
       runRuleBasedAnalysis(assetId, location, type, date, note, workflow);
     } finally {
       btnText.textContent = "🔍 Analisis dengan AI";
@@ -550,7 +560,7 @@ function runRuleBasedAnalysis(assetId, location, type, date, note, workflow) {
   if (panel) {
     const note2 = document.createElement("p");
     note2.style.cssText = "font-size:11px;color:#888;margin-top:8px;padding:8px;background:#f8f9fa;border-radius:6px;";
-    note2.innerHTML = `💡 <em>Mode rule-based aktif. Untuk analisis AI penuh, tambahkan Gemini API Key di main.js baris 8. <a href="https://ai.google.dev" target="_blank">Dapatkan gratis di ai.google.dev</a></em>`;
+    note2.innerHTML = `💡 <em>Mode rule-based aktif. Untuk analisis AI penuh, tambahkan Groq API Key di main.js baris 13. <a href="https://console.groq.com" target="_blank">Dapatkan gratis di console.groq.com</a></em>`;
     panel.appendChild(note2);
   }
 }
