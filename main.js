@@ -1,3 +1,14 @@
+/* ==========================================================
+   OPS GUARD — main.js
+   Handles: navbar, form validation, AI analysis (Gemini),
+   localStorage records, audit trail, KPI dashboard,
+   review queue, export CSV, demo simulations
+   ========================================================== */
+
+// ──────────────────────────────────────────────
+// GEMINI CONFIG — Ganti dengan API key milikmu
+// Dapatkan GRATIS di: https://ai.google.dev
+// ──────────────────────────────────────────────
 const GEMINI_API_KEY = "AIzaSyCBwBkFIX1fPOLQ8aFMY0YjZrzZU7C_vV4";
 const GEMINI_MODEL   = "gemini-2.0-flash";
 const GEMINI_URL     = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
