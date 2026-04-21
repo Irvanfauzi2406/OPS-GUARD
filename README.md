@@ -4,7 +4,7 @@
 
 ## Overview
 
-GovernanceFlow adalah prototype web app untuk menjawab masalah umum dalam operasional maintenance:
+Ops Guard adalah prototype web app untuk menjawab masalah umum dalam operasional maintenance:
 - input data manual yang tidak seragam
 - typo dan duplikasi data
 - approval flow yang lambat
@@ -23,7 +23,7 @@ Banyak tim operasional masih mencatat maintenance secara manual dengan format ya
 
 ## Solution
 
-GovernanceFlow menyediakan:
+Ops Guard menyediakan:
 - **Smart Form** untuk input data terstruktur
 - **AI-assisted Validation** untuk mendeteksi format salah, duplikasi, dan inkonsistensi
 - **Approval Workflow** untuk review yang lebih fokus
@@ -115,7 +115,7 @@ Versi lanjutan bisa dikembangkan dengan:
 
 ## Project Value
 
-GovernanceFlow menunjukkan bagaimana pendekatan governance bisa dibuat lebih praktis, mudah dipakai, dan relevan untuk operasional nyata — bukan hanya sebagai laporan, tapi sebagai sistem kerja harian.
+Ops Guard menunjukkan bagaimana pendekatan governance bisa dibuat lebih praktis, mudah dipakai, dan relevan untuk operasional nyata — bukan hanya sebagai laporan, tapi sebagai sistem kerja harian.
 
 ---
 
@@ -129,17 +129,6 @@ governance-hackathon/
 └── README.md
 ```
 
-## How to Run
-
-Cukup buka `index.html` di browser.
-
-Untuk deploy cepat:
-- Vercel
-- Netlify
-- GitHub Pages
-
----
-
 ## Submission One-liner
 
-**GovernanceFlow is an AI-assisted maintenance governance web app that standardizes maintenance reporting, improves data integrity, and enables accountable review through validation, approval routing, and audit visibility.**
+**Ops Guard is an AI-assisted maintenance governance web app that standardizes maintenance reporting, improves data integrity, and enables accountable review through validation, approval routing, and audit visibility.**
