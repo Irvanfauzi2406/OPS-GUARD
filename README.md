@@ -63,7 +63,7 @@ Menampilkan:
 
 ## Why This Matters for Governance
 
-GovernanceFlow bukan sekadar dashboard operasional. Platform ini mendukung governance karena:
+OPS Guard bukan sekadar dashboard operasional. Platform ini mendukung governance karena:
 - menstandardisasi proses pencatatan
 - meningkatkan integritas data
 - memperjelas akuntabilitas review
