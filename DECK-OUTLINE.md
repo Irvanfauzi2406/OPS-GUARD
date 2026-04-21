@@ -1,12 +1,12 @@
-# GovernanceFlow — Deck Outline
+# OPS Guard — Deck Outline
 
 ## Slide 1 — Title
-**GovernanceFlow**  
+**OPS Guard**  
 AI-assisted Maintenance Governance Platform
 
 ### Isi:
-- Nama project
-- Nama tim
+- Nama project: OPS Guard
+- Nama tim: GCM
 - Tagline: *Turning maintenance logs into reliable governance data*
 
 ---
@@ -42,17 +42,17 @@ Jika data maintenance tidak bisa dipercaya, keputusan maintenance juga ikut mele
 ---
 
 ## Slide 4 — Solution
-**GovernanceFlow: Simple, Structured, Accountable**
+**OPS Guard: Simple, Structured, Accountable**
 
 ### Solusi utama:
 - Structured submission form
 - AI-assisted validation
 - Priority review queue
-- Governance KPI dashboard
+- OPS Guard KPI dashboard
 - Audit trail
 
 ### Inti pesan:
-GovernanceFlow membuat pencatatan maintenance lebih terstandar, tervalidasi, dan mudah diaudit.
+OPS Guard membuat pencatatan maintenance lebih terstandar, tervalidasi, dan mudah diaudit.
 
 ---
 
@@ -97,7 +97,7 @@ Produk ini terasa seperti solusi nyata, bukan sekadar mockup statis.
 - 8 high-risk assets identified
 
 ### Inti pesan:
-GovernanceFlow membantu organisasi membuat keputusan maintenance lebih cepat dan lebih akuntabel.
+OPS Guard membantu organisasi membuat keputusan maintenance lebih cepat dan lebih akuntabel.
 
 ---
 
@@ -112,7 +112,7 @@ GovernanceFlow membantu organisasi membuat keputusan maintenance lebih cepat dan
 - Better data-driven decisions
 
 ### Inti pesan:
-Governance bukan teori di atas kertas — GovernanceFlow menjadikannya praktik harian.
+Governance bukan teori di atas kertas — OPS Guard menjadikannya praktik harian.
 
 ---
 
@@ -135,7 +135,7 @@ Prototype ini bisa berkembang jadi produk enterprise yang nyata.
 ## Slide 10 — Closing
 **Closing Statement**
 
-GovernanceFlow helps organizations move from messy maintenance records to reliable governance data.
+OPS Guard helps organizations move from messy maintenance records to reliable governance data.
 
 ### Penutup singkat:
 Simple enough for daily operations.  
