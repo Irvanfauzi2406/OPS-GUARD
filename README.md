@@ -122,11 +122,20 @@ Ops Guard menunjukkan bagaimana pendekatan governance bisa dibuat lebih praktis,
 ## Folder Structure
 
 ```bash
-governance-hackathon/
+OPS-GUARD/
+├── api/
+├── backend/
+├── DECK-OUTLINE.md
+├── PITCH.md
+├── README.md
+├── SUBMISSION.md
+├── dashboard.html
+├── form.html
 ├── index.html
-├── style.css
 ├── main.js
-└── README.md
+├── package.json
+├── style.css
+└── vercel.json
 ```
 
 ## Submission One-liner
